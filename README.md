@@ -1,17 +1,60 @@
-# type_of_test
+## 🧪 Testing
 
-A new Flutter project.
+As the application grows, manual testing becomes difficult.
+Automated testing ensures that the app works correctly before release while maintaining development speed.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📊 Types of Tests
 
-A few resources to get you started if this is your first Flutter project:
+### 🔹 Unit Tests
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+* Test a single function, method, or class
+* Focus on business logic correctness
+* Use mocking to isolate dependencies
+* Fast execution and low maintenance
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+### 🔹 Widget Tests
+
+* Test individual UI components (widgets)
+* Verify UI rendering and user interactions
+* Run in a simulated Flutter environment
+* More comprehensive than unit tests
+
+---
+
+### 🔹 Integration Tests
+
+* Test the full app or large features
+* Cover real user flows
+* Provide the highest confidence
+* Slower and more complex
+
+---
+
+## ⚖️ Trade-offs
+
+| Type        | Confidence | Maintenance | Dependencies | Speed |
+| ----------- | ---------- | ----------- | ------------ | ----- |
+| Unit        | Low        | Low         | Few          | Fast  |
+| Widget      | Higher     | Medium      | More         | Fast  |
+| Integration | Highest    | High        | Most         | Slow  |
+
+---
+
+## 🎯 Testing Strategy
+
+* Focus on writing many **Unit Tests** for core logic
+* Use **Widget Tests** for UI validation
+* Add **Integration Tests** for critical user flows
+* Track **Code Coverage** to ensure quality
+
+---
+
+## 🛠️ Run Tests
+
+```bash
+flutter test
+```
